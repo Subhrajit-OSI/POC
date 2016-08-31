@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="POC at OSI">
+    <meta name="keywords" content="HTML5,CSS3,JavaScript,jQuery,Backbone">
+    <meta name="author" content="Subhrajit Nayak">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POC</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="header" class="container"><h1></h1></div>
+    <div id="content"></div>
+    <div id="footer"></div>
+
+    <!-- Form 1 HTML Template -->
+    <script type="text/template" id="tpl-form1">
+        <div class="container">
+          <form name="user_form_1" id="user_form_1">
+            <div class="form-group">
+                <label for="fname"><span class="imp">*</span> First Name : </label>
+                <input type="text" class="form-control" required="required" name="firstname" id="fname" value="" autofocus/>
+            </div>
+            <div class="form-group">
+                <label for="lname"><span class="imp">*</span> Last Name : </label>
+                <input type="text" class="form-control" required="required" name="lastname"  id="lname" value="" autofocus/>
+            </div>
+          </form>
+            <a class="btn btn-primary" id="nextpage" href="#form2">Next</a>
+        </div>
+    </script>
+
+    <!-- Form 2 HTML Template -->
+    <script type="text/template" id="tpl-form2">
+      <div class="container">
+        <form name="user_form_2">
+          <div class="form-group">
+              <label for="addOne"><span class="imp">*</span> Address One : </label>
+              <input type="text" class="form-control" required="required" name="address1" id="addOne" autofocus/>
+          </div>
+          <div class="form-group">
+              <label for="addTwo">Address Two : </label>
+              <input type="text" class="form-control" name="address2" id="addTwo" autofocus/>
+          </div>
+          <div class="form-group">
+              <label for="city">City : </label>
+              <input type="text" class="form-control" name="city" id="city" autofocus/>
+          </div>
+          <div class="form-group">
+              <label for="state">State : </label>
+              <input type="text" class="form-control" name="state" id="state" autofocus/>
+          </div>
+          <div class="form-group">
+              <label for="zipcode">ZipCode : </label>
+              <input type="number" class="form-control" name="zipcode" id="zipcode" autofocus/>
+          </div>
+        </form>
+        <a class="btn btn-primary" id="complete" href="#form1">Finish</a>
+      </div>
+    </script>
+
+    <!-- Include All Script Files -->
+    <script type="text/javascript" src="js/vendor/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="js/vendor/backbone-min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/views/form1.js"></script>
+    <script type="text/javascript" src="js/views/form2.js"></script>
+    <script type="text/javascript" src="js/models/ToDo.js"></script>
+    <script type="text/javascript" src="js/collections/ToDos.js"></script>
+    <script>
+        window.onload = function() {
+            app.init();
+        }
+    </script>
+</body>
+</html>

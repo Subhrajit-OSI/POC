@@ -1,0 +1,18 @@
+#footer{
+    width:85%;
+    min-height:50px;
+    height:auto;
+    margin:0 auto;
+    margin-top:100px;
+    margin-bottom:20px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight:bold;
+    overflow: auto;
+}
+.imp{
+    color:red;
+}
+.form-control{
+  width:50%;
+}
